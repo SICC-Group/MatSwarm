@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	width="64px" height="16px" viewBox="0 0 64 16" enable-background="new 0 0 64 16" xml:space="preserve">
+<g transform="translate(0, 0)">
+	<polygon fill="#6C7079" points="8,12.6 0.3,4.9 1.7,3.4 8,9.7 14.3,3.4 15.7,4.9 "/>
+</g>
+<g transform="translate(16, 0)">
+	<path fill="#6C7079" d="M15,3H8.4L5.7,0.3C5.5,0.1,5.3,0,5,0H1C0.4,0,0,0.4,0,1v14c0,0.6,0.4,1,1,1h14
+		c0.6,0,1-0.4,1-1V4C16,3.4,15.6,3,15,3z"/>
+</g>
+<g transform="translate(32, 0)">
+	<path fill="#6C7079" d="M15.8,7.4C15.6,7.2,15.3,7,15,7H4
+		C3.6,7,3.2,7.2,3.1,7.6l-3,7C-0.1,15.2,0.1,16,1,16h11
+		c0.4,0,0.8-0.2,0.9-0.6l3-7C16.1,8.1,16,7.7,15.8,7.4z"/>
+	<path fill="#6C7079" d="M1.2,6.8C1.7,5.7,2.8,5,4,5h9V3c0-0.6-0.4-1-1-1H6.4L4.7,0.3
+		C4.5,0.1,4.3,0,4,0H1C0.4,0,0,0.4,0,1v8.7L1.2,6.8z"/>
+</g>
+<g transform="translate(48, 0)">
+	<path fill="#6C7079" d="M15,0H1C0.4,0,0,0.4,0,1v14c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V1
+		C16,0.4,15.6,0,15,0z "/>
+</g>
+</svg>

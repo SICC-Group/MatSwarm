@@ -1,0 +1,62 @@
+@headerHeight: 64px;
+@padding: 12px;
+@height: @headerHeight - @padding * 2;
+@borderRadius: (@headerHeight - @padding * 2) / 2;
+
+
+// // TODO fix hack
+// @menu-item-padding: 0 12px;
+// .ant-menu-submenu-title {
+//     padding: @menu-item-padding;
+// }
+
+// .ant-menu-item {
+//     padding: @menu-item-padding;
+// }
+
+.mge-header {
+
+    &__title {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: row;
+        color: #FFF;
+        margin-right: 30px;
+
+        &:hover {
+            color: #FFF;
+        }
+
+        img {
+            display: block;
+            height: 100%;
+            width: 84px;
+            margin-right: 4px;
+        }
+
+        &__text {
+            display: block;
+            text-align: center;
+            .material {
+                line-height: 29px;
+                font-size: 24px;
+                white-space: nowrap;
+            }
+            .mged {
+                line-height: 15px;
+                font-size: 11px;
+                white-space: nowrap;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    &__avatar {
+        display: flex;
+    }
+
+    &__index {
+        display: inline-block;
+        padding: 0 12px;
+    }
+}

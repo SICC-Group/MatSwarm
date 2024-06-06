@@ -1,0 +1,32 @@
+.DropArea {
+    margin-top: 12px;
+    height: 120px;
+    display: flex;
+    border: 2px solid #5AA6C7;
+    border-style: dashed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    font-size: 16px;
+    color: #252525;
+
+    &__icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 20px;
+    }
+    &.Hover {
+        background: #e1bee7;
+    }
+}
+
+.InlineDropArea {
+    height: 12px;
+    background: transparent;
+    transition: height 0s;
+    &.Hover {
+        height: 48px;
+        transition: height 0.1s;
+    }
+}

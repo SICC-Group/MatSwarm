@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/static/webpack/",
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "module": "esnext",
+      "target": "esnext",
+      "allowJs": true,
+      "strict": false,
+      "noUnusedLocals": false, 
+      // "noImplicitThis": true,
+      "allowSyntheticDefaultImports": true,
+      "lib": ["dom", "esnext"], 
+      "jsx": "react",
+      "moduleResolution": "node",
+      "typeRoots": [
+        "node",
+        "./typings/"
+      ], 
+      "types": [
+        
+      ],
+      "resolveJsonModule": true,
+      "experimentalDecorators": true,
+      "importHelpers": true
+    },
+    "exclude": [
+      "node_modules",
+      "venv"
+    ]
+  }
+  

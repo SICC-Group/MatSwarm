@@ -1,0 +1,6 @@
+.idea/
+database/
+main
+chaincode/vendor/
+*.log
+database*/

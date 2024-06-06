@@ -1,0 +1,141 @@
+.md-modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+
+	z-index: 2000;
+	visibility: hidden;
+  backface-visibility: hidden;
+  flex-direction: column;
+}
+
+.md-show {
+  visibility: visible;
+  
+  // 背景模糊效果
+  &.md-effect-blur ~ #wrap {
+    filter: blur(3px);
+  }
+
+  & ~ .md-overlay {
+    opacity: 1;
+	  visibility: visible;
+  }
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.45);
+	transition: all 0.3s;
+}
+
+.md-content {
+	color: #000;
+	background: #f9f9f9;
+	position: relative;
+	border-radius: 4px;
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: 320px;
+  overflow: auto;
+
+  .modal-body {
+    overflow: auto;
+  }
+
+  .modal-footer {
+    display: block;
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+/* Individual modal styles with animations/transitions */
+.md-effect-1 {
+  .md-content {
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &.md-show .md-content {
+    transform: scale(1);
+	  opacity: 1;
+  }
+}
+
+.md-effect-2 {
+  .md-content {
+    transform: translateX(20%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  }
+
+  &.md-show .md-content {
+    transform: translateX(0);
+	  opacity: 1;
+  }
+}
+
+.md-effect-3 {
+  .md-content {
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  &.md-show .md-content {
+    transform: translateY(0);
+	  opacity: 1;
+  }
+}
+
+
+/* Effect 7:  slide and stick to top */
+.md-effect-7 {
+  justify-content: flex-start;
+  .md-content {
+    transform: translateY(-200%);
+    transition: all .3s ease;
+	  opacity: 0;
+  }
+
+  &.md-show .md-content {
+    transform: translateY(0%);
+	  border-radius: 0 0 4px 4px;
+	  opacity: 1;
+  }
+}
+
+
+// content style
+
+.md-content h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+
+.md-content > div {
+	padding: 16px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}

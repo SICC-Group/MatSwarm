@@ -1,0 +1,136 @@
+@mixin ellipsisText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin recusivePadding($max, $current, $showIcon, $paddingLeft) {
+  $delta: 18;
+  
+  label.item, a.item {
+    @if $showIcon {
+      &::after{
+        left: #{41 + $current * $delta}px;
+      }
+    }
+    padding-left: #{$paddingLeft + $current * $delta}px;
+  }
+  
+  label.item::before {
+    left: #{18 + $current * $delta}px;
+  }
+  @if $max > $current {
+    ul {
+      @include recusivePadding($max, $current + 1, $showIcon, $paddingLeft)
+    }
+  }
+}
+
+@mixin AccordionMenuBase($iconURL, $maxDepth, $showIcon, $labelBasePadding) {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  ul {
+    list-style: none;
+    // display: none;
+    padding: 0;
+  }
+  li {
+    user-select: none;
+    list-style: none;
+  }
+  input[type=checkbox].item {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    opacity: 0;
+
+    &:checked+label.item::before {
+      transform: translateY(-50%)
+    }
+    @if $showIcon{
+      &:checked+label.item::after {
+        background-position: -32px 0
+      }
+    }
+    &:checked+label.item+ul,
+    &:checked+label.item:nth-of-type(n)+ul {
+      display: block
+    }
+  }
+
+  label.item, a.item {
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 18px 18px 18px 64px;
+    background: transparent;
+    box-shadow: inset 0 -1px #DDD;
+    color: #4d5158;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: bold;
+    
+    @include ellipsisText;
+
+    &:hover {
+      background: #EEE;
+    }
+  }
+  label.item::before,
+  label.item::after, a.item::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+  label.item {
+    cursor: pointer
+  }
+  
+  @if $showIcon {
+    label.item::before,
+    label.item::after {
+      background-image: url($iconURL);
+      background-repeat: no-repeat
+    }
+  }
+  @else {
+    label.item::before {
+      background-image: url($iconURL);
+      background-repeat: no-repeat
+    }
+  }
+
+  label.item::before {
+    background-position: 0 0;
+    transform: translateY(-50%) rotate(-90deg)
+  }
+  @if $showIcon {
+    label.item::after {
+      background-position: -16px 0
+    }
+    a.item::after {
+      background: url($iconURL) no-repeat -48px 0
+    }
+  }
+  
+  ul {
+    label.item, a.item {
+      box-shadow: inset 0 -1px #DDD;
+    }
+  }
+
+  &.animated label.item::before {
+    transition: transform .3s
+  }
+
+  @include recusivePadding($maxDepth, 0, $showIcon, $labelBasePadding);
+}

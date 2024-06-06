@@ -1,0 +1,78 @@
+.selector {
+  width: 100%;
+  position: relative;
+  text-align: left;
+  
+  button {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+
+  ul {
+    z-index: 499;
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    list-style: none;
+    top: -32px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    max-height: 320px;
+    overflow: auto;
+    box-shadow: 0 0 5px 1px #ccc;
+
+    &.hide {
+      display: none;
+    }
+
+    li {
+      padding: 6px 24px;
+
+      &:hover {
+        background-color: #EEE;
+      }
+
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: black;
+        
+      }
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      &.divider {
+        cursor: default;
+        padding-left: 8px;
+        a {
+          cursor: default;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background-color: #FFF;
+        }
+      }
+    }
+  }
+}

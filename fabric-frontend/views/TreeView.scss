@@ -1,0 +1,100 @@
+@import "./AccordionMenuBase.scss";
+
+@mixin DeleteButton {
+  .delete-button {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    border: none;
+    background: transparent;
+   
+    top: 18px;
+    height: 20px;
+    color: #9E9E9E;
+
+    visibility: hidden;
+
+    i {
+      font-size: 20px;
+    }
+  }
+  ul {
+    .delete-button {
+      top: 16px;
+    }
+  }
+
+  label:hover .delete-button {
+    visibility: visible;
+  }
+  
+  a:hover .delete-button {
+    visibility: visible;
+  }
+}
+
+
+.tree-view {
+  @include AccordionMenuBase('../img/cd-icons.svg', 3, true, 64);
+
+  @include DeleteButton();
+}
+
+.tree-view-no-icon {
+  @include AccordionMenuBase('../img/cd-icons.svg', 3, false, 41);
+
+  @include DeleteButton();
+}
+
+.tree-view-with-checkbox {
+
+  @mixin md-padding($max, $current) {
+    $delta: 18;
+    
+    .material-checkbox {
+      left: #{41 + $current * $delta}px;
+    }
+    
+    @if $max > $current {
+      ul {
+        @include md-padding($max, $current + 1);
+      }
+    }
+  }
+  @include AccordionMenuBase('../img/cd-icons.svg', 12, false, 64);
+
+  @include DeleteButton();
+
+  .material-checkbox {
+    position: absolute;
+    top: 0px;
+    margin: 20px 0;
+  }
+
+  @include md-padding(12, 0);
+}
+
+.modal-body {
+  .tree-view-with-checkbox {
+    margin: -16px;
+  }
+  .tree-view {
+    margin: -16px;
+  }
+}
+
+.tree-view-background {
+  text-align: center;
+  padding-top: 48px;
+  font-size: 24px;
+  color: #9E9E9E;
+
+  .tree-view-with-checkbox + & {
+    display: none;
+  }
+
+  .tree-view-with-checkbox:empty + & {
+    display: block;
+  }
+}

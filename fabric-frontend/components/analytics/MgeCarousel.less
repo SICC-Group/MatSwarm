@@ -1,0 +1,66 @@
+.MgeCarousel {
+    min-height: 150px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 8px 12px;
+        color: #252525;
+    }
+
+    &__content {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+
+        &__graph {
+            flex: 1;
+            position: relative;
+        }
+
+        &__arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            img {
+                width: 16px;
+                height: 16px;
+                margin: 8px;
+            }
+        }
+    }
+
+    &__dots {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__dot {
+            cursor: pointer;
+            border-radius: 8px;
+            height: 8px;
+            width: 8px;
+            border: 1px solid #8B8B8B;
+            background: transparent;
+            margin: 8px;
+            &.selected {
+                background: #8B8B8B;
+            }
+        }   
+    }
+
+    &__spin {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+}

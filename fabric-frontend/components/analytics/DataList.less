@@ -1,0 +1,42 @@
+.DataList {
+    padding: 8px 0px;
+    min-height: 208px;
+    background: #FFF;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__spin {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding: 8px 20px;
+        color: #8B8B8B;
+        cursor: pointer;
+
+        &:hover {
+            background: #FFECC7;
+            color: #252525;
+        }
+
+        &__title {
+            font-size: 12px;
+            line-height: 16px;
+            flex: 1;
+        }
+
+        &__value {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}

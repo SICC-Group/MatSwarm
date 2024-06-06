@@ -1,0 +1,36 @@
+
+.condition-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  clear: both;
+  font-size: 18px;
+  // cursor: pointer;
+
+  // &:hover {
+  //   background-color: #e6e6e6;
+  //   border-color: #adadad;
+  // }
+
+  &.disabled {
+    cursor: not-allowed;
+    &:hover {
+      background: #fff;
+      border-color: #ccc;
+    }
+  }
+}
+
+.button-group-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 16px
+}

@@ -1,0 +1,54 @@
+.TitledDataList {
+    min-height: 208px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0 14px 0;
+
+    &__header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        &__item {
+            padding: 8px 0;
+            flex: 1;
+            flex-basis: 0;
+            text-align: center;
+            font-size: 10px;
+            line-height: 14px;
+            color: #252525;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        &__item {
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+
+            &__item {
+                text-align: center;
+                flex: 1;
+                flex-basis: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 12px;
+                line-height: 16px;
+                padding: 8px;
+            }
+
+            &:hover {
+                color: #252525;
+                background: #FFECC7;
+            }
+        }
+    }
+}
