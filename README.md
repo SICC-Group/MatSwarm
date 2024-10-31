@@ -6,7 +6,7 @@ This is the official demonstration project for the MatSwarm federated computing 
 
 Please cite the following article if you find this code useful in your work.
 
-'''
+```
 @article{wang2024matswarm,
   title={Matswarm: trusted swarm transfer learning driven materials computation for secure big data sharing},
   author={Wang, Ran and Xu, Cheng and Zhang, Shuhao and Ye, Fangwen and Tang, Yusen and Tang, Sisui and Zhang, Hangning and Du, Wendi and Zhang, Xiaotong},
@@ -17,7 +17,7 @@ Please cite the following article if you find this code useful in your work.
   year={2024},
   publisher={Nature Publishing Group UK London}
 }
-'''
+```
 
 #### MatSwarm Federated Computing System Architecture
 
