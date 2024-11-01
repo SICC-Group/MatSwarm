@@ -12,8 +12,8 @@ Please cite the following article if you find this code useful in your work.
   author={Wang, Ran and Xu, Cheng and Zhang, Shuhao and Ye, Fangwen and Tang, Yusen and Tang, Sisui and Zhang, Hangning and Du, Wendi and Zhang, Xiaotong},
   journal={Nature Communications},
   volume={15},
-  number={1},
-  pages={9290},
+  number={9290},
+  pages={1-14},
   year={2024},
   publisher={Nature Publishing Group UK London}
 }
